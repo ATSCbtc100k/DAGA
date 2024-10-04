@@ -72,6 +72,8 @@ with st.form("datos_form"):
         updated_df = pd.concat([existing_data, nuevo_dato], ignore_index=True)
 
         conn.update(worksheet="dadesdaga", data=updated_df)
+        st.cache_data.clear()
+        st.rerun()
         
         # Limpiar el estado de la sesión
         for key in st.session_state.keys():
