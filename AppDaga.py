@@ -72,6 +72,7 @@ with st.form("datos_form"):
         updated_df = pd.concat([existing_data, nuevo_dato], ignore_index=True)
 
         conn.update(worksheet="dadesdaga", data=updated_df)
+        st.success("Dades enviades, gràcies company. Sobretot no repeteixis l'operació per no duplicar. Fins demà.")
         st.cache_data.clear()
         st.rerun()
         
@@ -79,4 +80,4 @@ with st.form("datos_form"):
         for key in st.session_state.keys():
             del st.session_state[key]
 
-        st.success("Dades enviades, gràcies company. Sobretot no repeteixis l'operació per no duplicar. Fins demà.")
+        
