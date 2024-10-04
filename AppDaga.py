@@ -74,7 +74,7 @@ with st.form("datos_form"):
         conn.update(worksheet="dadesdaga", data=updated_df)
         st.success("Dades enviades, gràcies company. Sobretot no repeteixis l'operació per no duplicar. Fins demà.")
         st.cache_data.clear()
-        st.rerun()
+        #st.rerun()
         
         # Limpiar el estado de la sesión
         for key in st.session_state.keys():
