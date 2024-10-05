@@ -4,7 +4,7 @@ from streamlit_gsheets import GSheetsConnection
 from datetime import datetime
 
 # Configurar la página de la aplicación
-st.set_page_config(page_title="Recolección de Datos Diarios", page_icon="📊", layout="centered")
+st.set_page_config(page_title="Recolección de Datos Diarios", page_icon="📊", layout="centered",hide_menu=True)
 
 # Conectar a Google Sheets
 conn = st.connection("gsheets", type=GSheetsConnection)
